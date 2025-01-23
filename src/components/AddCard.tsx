@@ -24,7 +24,7 @@ const AddCard = ({ onAdd }: Props) => {
     return (
       <button
         onClick={() => setIsAdding(true)}
-        className="flex items-center gap-1 text-gray-600 hover:text-gray-900 transition-colors p-2"
+        className="flex items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors p-2 w-full rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50"
       >
         <PlusIcon size={16} />
         <span>Add a card</span>
@@ -39,10 +39,10 @@ const AddCard = ({ onAdd }: Props) => {
         value={content}
         onChange={(e) => setContent(e.target.value)}
         placeholder="Enter card content..."
-        className="w-full"
+        className="w-full bg-white dark:bg-gray-800"
       />
       <div className="flex gap-2">
-        <Button type="submit" size="sm">
+        <Button type="submit" size="sm" variant="default">
           Add Card
         </Button>
         <Button

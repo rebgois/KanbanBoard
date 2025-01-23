@@ -14,9 +14,11 @@ const Card = ({ card, index }: Props) => {
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          className={`p-4 mb-2 rounded-lg bg-white shadow-sm border border-gray-200 
-            ${snapshot.isDragging ? 'shadow-lg ring-2 ring-primary ring-opacity-50' : ''}
-            hover:shadow-md transition-shadow duration-200`}
+          className={`p-4 mb-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700
+            ${snapshot.isDragging 
+              ? 'shadow-lg ring-2 ring-blue-500/50 dark:ring-blue-400/50' 
+              : 'shadow-sm hover:shadow-md'}
+            transition-all duration-200 text-gray-700 dark:text-gray-200`}
         >
           {card.content}
         </div>
